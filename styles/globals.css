@@ -1,16 +1,45 @@
-html,
+/* ./styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--gray-900: #111827;
+	--navy: #0a192f;
+	--lightest-navy: #233554;
+	--dark-slate: #495670;
+	--slate: #8892b0;
+	--lightest-slate: #ccd6f6;
+}
+
+::selection {
+	background-color: var(--lightest-navy);
+	color: var(--lightest-slate);
+}
+
+/* Scrollbar Styles */
+html {
+	scrollbar-width: thin;
+	scrollbar-color: var(--dark-slate) var(--navy);
+}
+
+body::-webkit-scrollbar {
+	width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+	background: var(--navy);
+}
+
+body::-webkit-scrollbar-thumb {
+	background-color: var(--dark-slate);
+	border: 3px solid var(--navy);
+	border-radius: 10px;
+}
+
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
+	width: 100%;
+	min-height: 100%;
+	overflow-x: hidden;
+	background-color: var(--gray-900);
 }
