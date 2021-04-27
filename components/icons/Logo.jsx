@@ -2,10 +2,11 @@ function Logo() {
 	return (
 		<svg
 			id="logo"
-			className="block w-full h-full mx-auto select-none"
+			className="w-full h-full transition-all select-none hover:fill-current"
 			xmlns="http://www.w3.org/2000/svg"
 			role="img"
 			viewBox="0 0 86 86"
+			fill="none"
 		>
 			<title>Logo</title>
 			<g transform="translate(-8.000000, -2.000000)">

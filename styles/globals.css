@@ -10,6 +10,7 @@
 	--dark-slate: #495670;
 	--slate: #8892b0;
 	--lightest-slate: #ccd6f6;
+	--example: rgb(209, 213, 219);
 }
 
 ::selection {
@@ -42,4 +43,8 @@ body {
 	min-height: 100%;
 	overflow-x: hidden;
 	background-color: var(--gray-900);
+}
+
+#logo:hover, #logo:focus {
+	fill: rgba(251, 190, 36, 0.1);
 }

@@ -9,6 +9,7 @@ module.exports = {
 			// colors: {
 			// 	'navi-blue': '#020c1b',
 			// },
+			// textColor: ['active'],
 		},
 	},
 	variants: {
