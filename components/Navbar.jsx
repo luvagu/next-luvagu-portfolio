@@ -28,7 +28,7 @@ function Navbar() {
 
 	return (
 		<header
-			className={`fixed top-0 z-10 flex justify-between items-center px-6 md:px-10 lg:px-12 w-full h-24 bg-gray-900 bg-opacity-80 filter-none pointer-events-auto select-auto backdrop-filter backdrop-blur-md transition-all duration-300 ${scrollDirection === 'up' && !scrolledToTop ? 'h-16 transform shadow-xl' : ''} ${scrollDirection === 'down' && !scrolledToTop ? 'h-16 transform -translate-y-16 shadow-xl' : ''}`}
+			className={`fixed top-0 z-10 flex justify-between items-center py-0 px-6 md:px-10 lg:px-12 w-full h-24 bg-gray-900 bg-opacity-80 filter-none pointer-events-auto select-auto backdrop-filter backdrop-blur-md transition-all duration-300 ${scrollDirection === 'up' && !scrolledToTop ? 'h-16 transform translate-y-0 shadow-xl' : ''} ${scrollDirection === 'down' && !scrolledToTop ? 'h-16 transform -translate-y-16 shadow-xl' : ''}`}
 		>
 			<nav className="flex justify-between items-center relative w-full text-gray-300 z-20">
 				{/* logo */}
@@ -42,9 +42,9 @@ function Navbar() {
 
 				{/* links */}
 				<div className="hidden md:flex items-center">
-                    <ol className="list-none flex justify-between items-center">
+                    <ol className="list-none p-0 m-0 flex justify-between items-center">
                         {navLinks && navLinks.map(({ name, url }, idx) => (
-                            <li key={idx} className="mx-1.5 relative text-sm font-semibold">
+                            <li key={idx} className="my-0 mx-1.5 relative text-sm font-semibold">
                                 <Link href={url}>
                                     <a className="p-2.5 hover:text-yellow-400 focus:text-yellow-400 focus:ring-1 focus:ring-yellow-400 focus:outline-none">{name}</a>
                                 </Link>
