@@ -2,11 +2,11 @@ import anime from 'animejs'
 import { useEffect, useState } from 'react'
 import { IconLoader } from './icons'
 
-function Loader({ finishLoading }) {
+function Loader({ endLoading }) {
 	const [isMounted, setIsMounted] = useState(false)
 
 	const animate = () => {
-		const loader = anime.timeline({ complete: () => finishLoading() })
+		const loader = anime.timeline({ complete: () => endLoading() })
 
 		loader
 			.add({

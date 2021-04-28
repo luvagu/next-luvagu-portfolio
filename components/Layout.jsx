@@ -7,7 +7,7 @@ function Layout({ children }) {
 	return (
 		<div id="rootDiv" className="min-h-screen grid">
 			{isLoading ? (
-				<Loader finishLoading={() => setIsLoading(false)} />
+				<Loader endLoading={() => setIsLoading(false)} />
 			) : (
 				<div className="flex flex-col min-h-screen">
 					<Navbar />

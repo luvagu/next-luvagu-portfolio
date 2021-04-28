@@ -46,13 +46,22 @@ function Navbar() {
                         {navLinks && navLinks.map(({ name, url }, idx) => (
                             <li key={idx} className="my-0 mx-1.5 relative text-sm font-semibold">
                                 <Link href={url}>
-                                    <a className="p-2.5 hover:text-yellow-400 focus:text-yellow-400 focus:ring-1 focus:ring-yellow-400 focus:outline-none">{name}</a>
+                                    <a className="p-2.5 hover:text-yellow-400 focus:text-yellow-400 focus:ring-1 focus:ring-yellow-400 focus:outline-none">
+										{name}
+									</a>
                                 </Link>
                             </li>
                         ))}
                     </ol>
                     <div className="">
-                        <a className="ml-4 text-sm font-semibold text-yellow-400 border border-yellow-400 rounded py-2 px-4 duration-300 hover:bg-yellow-400 hover:bg-opacity-10 focus:outline-none" href="/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+                        <a 
+							className="ml-4 text-sm font-semibold text-yellow-400 border border-yellow-400 rounded py-2 px-4 duration-300 hover:bg-yellow-400 hover:bg-opacity-10 focus:outline-none" 
+							href="/resume.pdf" 
+							target="_blank" 
+							rel="noopener noreferrer"
+						>
+							Resume
+						</a>
                     </div>
                 </div>
 				<MobileMenu />
