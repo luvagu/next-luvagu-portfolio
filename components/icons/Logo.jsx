@@ -2,7 +2,7 @@ function Logo() {
 	return (
 		<svg
 			id="logo"
-			className="w-full h-full transition-all select-none hover:fill-current"
+			className="w-full h-full transition-all duration-300 select-none hover:fill-current"
 			xmlns="http://www.w3.org/2000/svg"
 			role="img"
 			viewBox="0 0 86 86"

@@ -5,12 +5,14 @@
 
 :root {
 	--gray-900: #111827;
+	--yellow-400: #fbbf24;
 	--navy: #0a192f;
 	--lightest-navy: #233554;
 	--dark-slate: #495670;
 	--slate: #8892b0;
 	--lightest-slate: #ccd6f6;
 	--example: rgb(209, 213, 219);
+	--dark-gray-shadow: rgba(10, 10, 10, 0.7);
 }
 
 ::selection {
@@ -45,6 +47,7 @@ body {
 	background-color: var(--gray-900);
 }
 
-#logo:hover, #logo:focus {
+#logo:hover,
+#logo:focus {
 	fill: rgba(251, 190, 36, 0.1);
 }

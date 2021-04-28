@@ -48,7 +48,7 @@ function Loader({ finishLoading }) {
 	return (
 		<div className="loader">
 			<div className="fixed inset-0 w-full h-full bg-black z-50 flex justify-center items-center">
-				<div className={`w-max transition-all ${isMounted ? 'opacity-100' : 'opacity-0'}`}>
+				<div className={`w-max transition-all duration-300 ${isMounted ? 'opacity-100' : 'opacity-0'}`}>
 					<IconLoader />
 				</div>
 			</div>

@@ -10,6 +10,13 @@ module.exports = {
 			// 	'navi-blue': '#020c1b',
 			// },
 			// textColor: ['active'],
+			transitionDelay: {
+				0: '0ms',
+				// 2000: '2000ms',
+			},
+			rotate: {
+				'225': '225deg',
+			}
 		},
 	},
 	variants: {
