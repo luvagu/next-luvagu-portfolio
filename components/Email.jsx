@@ -7,7 +7,7 @@ function Email() {
             <div id="email" className="flex flex-col items-center relative">
                 <a 
                     href={`mailto:${email}`}
-                    className="inline-block relative my-5 mx-auto p-2.5 text-xs leading-5 tracking-widest transform hover:-translate-y-1 focus:-translate-y-1 transition-all duration-300"
+                    className="inline-block relative my-5 mx-auto p-2.5 text-sm leading-5 tracking-widest transform hover:-translate-y-1 focus:-translate-y-1 transition-all duration-300"
                 >
                     {email}
                 </a>
