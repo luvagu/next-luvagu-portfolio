@@ -5,7 +5,7 @@ function Layout({ children }) {
 	const [isLoading, setIsLoading] = useState(true)
 
 	return (
-		<div id="rootDiv" className="min-h-screen grid">
+		<div id="layout" className="min-h-screen grid">
 			{isLoading ? (
 				<Loader endLoading={() => setIsLoading(false)} />
 			) : (
@@ -17,7 +17,7 @@ function Layout({ children }) {
 				</div>
 			)}
             <style jsx>{`
-                #rootDiv {
+                #layout {
                     grid-template-rows: 1fr auto;
                     grid-template-columns: 100%;
                 }

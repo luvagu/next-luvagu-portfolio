@@ -1,2 +1,5 @@
 export { default as IconLoader } from './Loader'
 export { default as IconLogo } from './Logo'
+export { default as IconGitHub } from './GitHub'
+export { default as IconLinkedin } from './Linkedin'
+export { default as IconExternal } from './External'

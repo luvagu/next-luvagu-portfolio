@@ -4,12 +4,13 @@
 @tailwind utilities;
 
 :root {
-	--gray-900: #111827;
-	--yellow-400: #fbbf24;
+	--gray-400: rgb(156, 163, 175);
+	--gray-900: rgb(17, 24, 39);
 	--gray-700: rgb(55, 65, 81);
 	--dark-gray-shadow: rgba(10, 10, 10, 0.7);
 	--lightest-navy: #233554;
 	--lightest-slate: #ccd6f6;
+	--yellow-400: rgb(251, 191, 36);
 }
 
 ::selection {
