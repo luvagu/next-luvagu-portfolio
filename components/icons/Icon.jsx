@@ -1,6 +1,6 @@
 import { IconGitHub, IconLinkedin, IconExternal } from '.'
 
-function RenderIcon({ name, height, width }) {
+function Icon({ name, height, width }) {
     switch (name) {
         case 'GitHub':
             return <IconGitHub height={height} width={width} />
@@ -11,4 +11,4 @@ function RenderIcon({ name, height, width }) {
     }
 }
 
-export default RenderIcon
+export default Icon

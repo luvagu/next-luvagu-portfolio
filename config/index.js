@@ -10,12 +10,8 @@ export const socialMedia = [
 		url: 'https://github.com/luvagu',
 	},
 	{
-		name: 'Twitter',
-		url: 'https://twitter.com/luiavag',
-	},
-	{
 		name: 'Linkedin',
-		url: 'https://www.linkedin.com/in/luis-vallejo-luvagu',
+		url: 'https://www.linkedin.com/in/luis-vallejo-luvagu/',
 	},
 ]
 
