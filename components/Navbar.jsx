@@ -32,7 +32,6 @@ function Navbar({ isHome }) {
 	const fadeUp = isHome ? 'fade' : ''
 	const fadeDown = isHome ? 'fadedown' : ''
 
-	console.log({isMounted, isHome})
 	return (
 		<header
 			className={`fixed top-0 z-10 flex justify-between items-center py-0 px-6 md:px-10 lg:px-12 w-full bg-gray-900 bg-opacity-80 filter-none pointer-events-auto select-auto backdrop-filter backdrop-blur-md transition-all duration-300 ${scrolledToTop ? 'h-24' : 'h-18'} ${scrollDirection === 'up' && !scrolledToTop ? 'transform translate-y-0 shadow-xl' : ''} ${scrollDirection === 'down' && !scrolledToTop ? 'transform -translate-y-16 shadow-xl' : ''}`}
