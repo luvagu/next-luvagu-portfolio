@@ -1,18 +1,18 @@
 import { useState } from 'react'
 import { Email, Loader, Navbar, Social } from '.'
 
-function Layout({ children }) {
+function Layout({ isHome, children }) {
 	const [isLoading, setIsLoading] = useState(true)
 
 	return (
 		<div id="layout" className="min-h-screen grid">
-			{isLoading ? (
+			{isLoading && isHome ? (
 				<Loader endLoading={() => setIsLoading(false)} />
 			) : (
 				<div className="flex flex-col min-h-screen">
-					<Navbar />
-					<Social />
-					<Email />
+					<Navbar isHome={isHome} />
+					<Social isHome={isHome} />
+					<Email isHome={isHome} />
 
 					<div id="content">
                         {children}

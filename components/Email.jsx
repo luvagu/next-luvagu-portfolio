@@ -1,9 +1,9 @@
 import { Side } from "."
 import { email } from "../config"
 
-function Email() {
+function Email({ isHome }) {
     return (
-        <Side position='right'>
+        <Side isHome={isHome} position='right'>
             <div id="email" className="flex flex-col items-center relative">
                 <a 
                     href={`mailto:${email}`}

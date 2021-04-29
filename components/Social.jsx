@@ -2,9 +2,9 @@ import { socialMedia } from '../config'
 import { Side } from '.'
 import { RenderIcon } from './icons'
 
-function Social() {
+function Social({ isHome }) {
     return (
-        <Side position='left'>
+        <Side isHome={isHome} position='left'>
             <ul className="flex flex-col items-center m-0 p-0 list-none">
                 {socialMedia && socialMedia.map(({ name, url }, idx) => (
                     <li key={idx}>
