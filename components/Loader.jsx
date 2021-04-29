@@ -10,20 +10,20 @@ function Loader({ endLoading }) {
 
 		loader
 			.add({
-				targets: '#logo circle',
+				targets: '#loader circle',
 				delay: 300,
 				duration: 1500,
 				easing: 'easeInOutQuart',
 				strokeDashoffset: [anime.setDashoffset, 0],
 			})
 			.add({
-				targets: '#logo #L',
+				targets: '#loader #L',
 				duration: 700,
 				easing: 'easeInOutQuart',
 				opacity: 1,
 			})
 			.add({
-				targets: '#logo',
+				targets: '#loader',
 				delay: 500,
 				duration: 300,
 				easing: 'easeInOutQuart',

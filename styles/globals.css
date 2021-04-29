@@ -6,13 +6,10 @@
 :root {
 	--gray-900: #111827;
 	--yellow-400: #fbbf24;
-	--navy: #0a192f;
-	--lightest-navy: #233554;
-	--dark-slate: #495670;
-	--slate: #8892b0;
-	--lightest-slate: #ccd6f6;
-	--example: rgb(209, 213, 219);
+	--gray-700: rgb(55, 65, 81);
 	--dark-gray-shadow: rgba(10, 10, 10, 0.7);
+	--lightest-navy: #233554;
+	--lightest-slate: #ccd6f6;
 }
 
 ::selection {
@@ -23,7 +20,7 @@
 /* Scrollbar Styles */
 html {
 	scrollbar-width: thin;
-	scrollbar-color: var(--dark-slate) var(--navy);
+	scrollbar-color: var(--gray-700) var(--gray-900);
 }
 
 body::-webkit-scrollbar {
@@ -31,12 +28,12 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-	background: var(--navy);
+	background: var(--gray-900);
 }
 
 body::-webkit-scrollbar-thumb {
-	background-color: var(--dark-slate);
-	border: 3px solid var(--navy);
+	background-color: var(--gray-700);
+	border: 3px solid var(--gray-900);
 	border-radius: 10px;
 }
 
@@ -44,7 +41,17 @@ body {
 	width: 100%;
 	min-height: 100%;
 	overflow-x: hidden;
+	-moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
 	background-color: var(--gray-900);
+	font-size: 20px;
+	line-height: 1.3;
+}
+
+@media (max-width: 480px) {
+	body {
+		font-size: 18px;
+	}
 }
 
 #logo:hover,

@@ -55,15 +55,15 @@ const Sidebar = ({ menuOpen, setMenuOpen }) => {
     return (
         <aside className="md:hidden flex justify-center items-center fixed top-0 right-0 bottom-0 py-12 px-2.5 h-screen bg-gray-800 transition-all duration-300">
             <nav className="flex justify-between items-center flex-col w-full text-gray-300 text-center">
-                <ol className="list-none w-full">
+                <ol className="p-0 m-0 list-none w-full">
                 {navLinks && navLinks.map(({ url, name }, idx) => (
                     <li 
                         key={idx}
-                        className="relative mx-auto mt-0 mb-2.5 sm:mb-5 text-sm sm:text-base font-semibold"
+                        className="relative mx-auto mt-0 mb-2.5 sm:mb-5 text-base sm:text-lg font-semibold"
                     >
                         <Link href={url}>
                             <a 
-                                className="w-full p-5 inline-block relative transition-all duration-300 hover:text-yellow-400 focus:text-yellow-400" 
+                                className="w-full p-5 inline-block relative hover:text-yellow-400 focus:text-yellow-400 transition-all duration-300" 
                                 onClick={() => setMenuOpen(false)}
                             >
                                 {name}
@@ -73,7 +73,7 @@ const Sidebar = ({ menuOpen, setMenuOpen }) => {
                 ))}
                 </ol>
                 <a 
-                    className="py-5 px-12 mt-1 mx-auto mb-0 text-yellow-400 text-sm font-semibold bg-transparent border border-yellow-400 rounded transition-all duration-300 hover:bg-yellow-400 hover:bg-opacity-10 focus:outline-none" 
+                    className="inline-block relative py-5 px-12 mt-1 mx-auto mb-0 text-yellow-400 text-base font-semibold leading-none bg-transparent border border-yellow-400 rounded hover:bg-yellow-400 hover:bg-opacity-10 focus:outline-none transition-all duration-300" 
                     href="/resume.pdf" 
                     target="_blank" 
                     rel="noopener noreferrer"

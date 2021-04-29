@@ -16,7 +16,10 @@ module.exports = {
 			},
 			rotate: {
 				'225': '225deg',
-			}
+			},
+			height: {
+				18: '70px'
+			},
 		},
 	},
 	variants: {
