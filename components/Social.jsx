@@ -28,7 +28,7 @@ function Social() {
                         margin: 0 auto;
                         background-color: var(--gray-400)
                     }
-                    li:last-of-type: {
+                    ul > li:last-of-type {
                         margin-bottom: 20px;
                     }
                 `}</style>

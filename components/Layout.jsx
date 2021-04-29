@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Loader, Navbar, Social } from '.'
+import { Email, Loader, Navbar, Social } from '.'
 
 function Layout({ children }) {
 	const [isLoading, setIsLoading] = useState(true)
@@ -12,6 +12,7 @@ function Layout({ children }) {
 				<div className="flex flex-col min-h-screen">
 					<Navbar />
 					<Social />
+					<Email />
 
 					<div id="content">
                         {children}
