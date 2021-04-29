@@ -8,15 +8,13 @@
 	--gray-900: rgb(17, 24, 39);
 	--gray-700: rgb(55, 65, 81);
 	--dark-gray-shadow: rgba(10, 10, 10, 0.7);
-	--lightest-navy: #233554;
-	--lightest-slate: #ccd6f6;
 	--yellow-400: rgb(251, 191, 36);
 	--easing: cubic-bezier(0.645, 0.045, 0.355, 1)
 }
 
 ::selection {
-	background-color: var(--lightest-navy);
-	color: var(--lightest-slate);
+	background-color: #233554;
+	color: #ccd6f6;
 }
 
 /* Scrollbar Styles */
@@ -43,9 +41,9 @@ body {
 	width: 100%;
 	min-height: 100%;
 	overflow-x: hidden;
+	background-color: var(--gray-900);
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
-	background-color: var(--gray-900);
 	font-size: 20px;
 	line-height: 1.3;
 }
