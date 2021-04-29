@@ -10,7 +10,7 @@ function Social({ isHome }) {
                     <li key={idx}>
                         <a 
                             href={url} 
-                            className="inline-block relative p-2.5 transform hover:-translate-y-1 focus:-translate-y-1 transition-all duration-300"
+                            className="inline-block relative p-2.5 hover:text-yellow-400 focus:text-yellow-400 focus:ring-1 focus:ring-yellow-400 focus:outline-none transform hover:-translate-y-1 focus:-translate-y-1 transition-all duration-300"
                             rel="noopener noreferrer"
                             target="_blank"
                         >
