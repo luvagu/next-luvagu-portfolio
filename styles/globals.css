@@ -59,9 +59,22 @@ body {
 	@apply inline-block relative hover:text-yellow-400 focus:text-yellow-400 transition-all duration-300;
 } */
 
+/* .common-section {
+	@apply my-0 mx-auto py-14 sm:py-20 md:py-24 px-0 max-w-5xl;
+} */
+
 #logo:hover,
 #logo:focus {
 	fill: rgba(251, 190, 36, 0.1);
+}
+
+p {
+	margin: 0 0 15px 0;
+}
+
+p:last-child,
+p:last-of-type {
+	margin: 0;
 }
 
 

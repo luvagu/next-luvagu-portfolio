@@ -20,6 +20,12 @@ module.exports = {
 			height: {
 				18: '70px'
 			},
+			// screens: {
+			// 	xs: '480px'
+			// },
+			// spacing: {
+			// 	30: '7.5rem'
+			// },
 		},
 	},
 	variants: {
