@@ -80,7 +80,7 @@ function Navbar({ isHome }) {
 							<CSSTransition classNames={fadeDown} timeout={delay}>
 								<div style={{ transitionDelay: `${isHome ? navLinks.length * 100 : 0}ms` }}>
 									<a 
-										className="inline-block relative ml-4 text-sm font-semibold text-yellow-400 bg-transparent border border-yellow-400 rounded py-3 px-4 leading-none hover:bg-yellow-400 hover:bg-opacity-10 focus:outline-none transition-all duration-300" 
+										className="inline-block relative ml-4 text-sm font-mono text-yellow-400 bg-transparent border border-yellow-400 rounded py-3 px-4 leading-none hover:bg-yellow-400 hover:bg-opacity-10 focus:outline-none transition-all duration-300" 
 										href="/resume.pdf" 
 										target="_blank" 
 										rel="noopener noreferrer"

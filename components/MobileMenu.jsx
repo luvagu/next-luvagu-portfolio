@@ -73,7 +73,7 @@ const Sidebar = ({ menuOpen, setMenuOpen }) => {
                 ))}
                 </ol>
                 <a 
-                    className="inline-block relative py-5 px-12 mt-1 mx-auto mb-0 text-yellow-400 text-base font-semibold leading-none bg-transparent border border-yellow-400 rounded hover:bg-yellow-400 hover:bg-opacity-10 focus:outline-none transition-all duration-300" 
+                    className="inline-block relative py-5 px-12 mt-1 mx-auto mb-0 text-yellow-400 text-base sm:text-lg font-mono leading-none bg-transparent border border-yellow-400 rounded hover:bg-yellow-400 hover:bg-opacity-10 focus:outline-none transition-all duration-300" 
                     href="/resume.pdf" 
                     target="_blank" 
                     rel="noopener noreferrer"
