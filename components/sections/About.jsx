@@ -16,8 +16,8 @@ function About() {
             <h2 className="section-heading">About Me</h2>
 
             <div className="inner-section block md:grid gap-12">
-                {/* about texts */}
                 <div>
+                    {/* about texts */}
                     <div>
                         <p className="mb-4">
                             Hello! I'm Luis and I love creating apps and features for the web. My web development journey started back in 2010 when I decided to improve my company's website by editing a custom OpenCart theme and adding features on top of it. The countless roadblocks along the way taught me lots about HTML/CSS, JS, PHP and SQL!

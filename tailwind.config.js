@@ -15,19 +15,20 @@ module.exports = {
 				// 2000: '2000ms',
 			},
 			rotate: {
-				'225': '225deg',
+				225: '225deg',
 			},
 			// height: {
 			// 	18: '70px'
 			// },
 			maxWidth: {
-				300: '300px'
+				300: '300px',
+				700: '700px',
 			},
 			// screens: {
 			// 	xs: '480px'
 			// },
 			spacing: {
-				18: '4.375rem'
+				18: '4.375rem',
 			},
 		},
 	},
