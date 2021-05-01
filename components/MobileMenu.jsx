@@ -10,7 +10,7 @@ const HamburgerButton = ({ menuOpen, toggleMenu }) => {
             onClick={toggleMenu}
         >
             <div className="inline-block relative w-8 h-6">
-                <div id="hamburger" className={`absolute top-1/2 right-0 w-8 h-0.5 rounded bg-yellow-400 transition-transform duration-200 ${menuOpen ? 'delay-150' : 'delay-0'} transform ${menuOpen ? 'rotate-225' : 'rotate-0'}`} />
+                <div className={`hamburger absolute top-1/2 right-0 w-8 h-0.5 rounded bg-yellow-400 transition-transform duration-200 ${menuOpen ? 'delay-150' : 'delay-0'} transform ${menuOpen ? 'rotate-225' : 'rotate-0'}`} />
 
                 <style jsx>{`
                     button {
@@ -18,8 +18,8 @@ const HamburgerButton = ({ menuOpen, toggleMenu }) => {
                         transition-duration: 0.15s;
                         transition-property: opacity, filter;
                     }
-                    #hamburger:before,
-                    #hamburger:after {
+                    .hamburger:before,
+                    .hamburger:after {
                         content: '';
                         display: block;
                         position: absolute;
@@ -33,13 +33,13 @@ const HamburgerButton = ({ menuOpen, toggleMenu }) => {
                         transition-duration: 0.15s;
                         transition-property: transform;
                     }
-                    #hamburger:before {
+                    .hamburger:before {
                         width: ${menuOpen ? '100%' : '120%'};
                         top: ${menuOpen ? '0' : '-10px'};
                         opacity: ${menuOpen ? 0 : 1};
                         transition: ${menuOpen ? 'top 0.1s ease-out, opacity 0.1s ease-out 0.12s' : 'top 0.1s ease-in 0.25s, opacity 0.1s ease-in'};
                     }
-                    #hamburger:after {
+                    .hamburger:after {
                         width: ${menuOpen ? `100%` : `80%`};
                         bottom: ${menuOpen ? `0` : `-10px`};
                         transform: rotate(${menuOpen ? `-90deg` : `0`});
