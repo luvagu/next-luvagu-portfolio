@@ -34,7 +34,7 @@ function Navbar({ isHome }) {
 
 	return (
 		<header
-			className={`fixed top-0 z-10 flex justify-between items-center py-0 px-6 md:px-10 lg:px-12 w-full bg-gray-900 bg-opacity-80 filter-none pointer-events-auto select-auto backdrop-filter backdrop-blur-md transition-all duration-300 ${scrolledToTop ? 'h-24' : 'h-18'} ${scrollDirection === 'up' && !scrolledToTop ? 'transform translate-y-0 shadow-xl' : ''} ${scrollDirection === 'down' && !scrolledToTop ? 'transform -translate-y-16 shadow-xl' : ''}`}
+			className={`fixed top-0 z-10 flex justify-between items-center py-0 px-6 md:px-10 lg:px-12 w-full bg-gray-900 bg-opacity-80 filter-none pointer-events-auto select-auto backdrop-filter backdrop-blur-md transition-all duration-300 ${scrolledToTop ? 'h-24' : 'h-18'} ${scrollDirection === 'up' && !scrolledToTop ? 'transform translate-y-0 header-scroll-shadow' : ''} ${scrollDirection === 'down' && !scrolledToTop ? 'transform -translate-y-18 header-scroll-shadow' : ''}`}
 		>
 			<nav className="flex justify-between items-center relative w-full text-gray-300 tracking-wide z-20">
 				{/* logo */}
@@ -64,7 +64,7 @@ function Navbar({ isHome }) {
 										style={{ transitionDelay: `${isHome ? idx * 100 : 0}ms` }}
 									>
 										<Link href={url}>
-											<a className="inline-block relative p-2.5 hover:text-yellow-400 focus:text-yellow-400 focus:ring-1 focus:ring-yellow-400 focus:outline-none transition-none">
+											<a className="inline-block relative p-2.5 hover:text-yellow-400 hover:ring-1 hover:ring-yellow-400 focus:outline-none transition-none">
 												{name}
 											</a>
 										</Link>

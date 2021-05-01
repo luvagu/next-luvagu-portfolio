@@ -1,8 +1,28 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { useRouter } from 'next/router'
 import { Email, Loader, Navbar, Social } from '.'
 
 function Layout({ isHome, children }) {
 	const [isLoading, setIsLoading] = useState(true)
+	const { asPath } = useRouter()
+
+	useEffect(() => {
+		if (isLoading) {
+			return
+		}
+
+		if (asPath) {
+			const id = asPath.substring(2) // asPath without the '/#'
+			setTimeout(() => {
+				const el = document.getElementById(id)
+				if (el) {
+					el.scrollIntoView()
+					el.focus()
+				}
+			}, 0)
+		}
+
+	}, [isLoading])
 
 	return (
 		<div id="layout" className="min-h-screen grid">

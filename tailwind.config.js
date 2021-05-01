@@ -17,19 +17,25 @@ module.exports = {
 			rotate: {
 				'225': '225deg',
 			},
-			height: {
-				18: '70px'
+			// height: {
+			// 	18: '70px'
+			// },
+			maxWidth: {
+				300: '300px'
 			},
 			// screens: {
 			// 	xs: '480px'
 			// },
-			// spacing: {
-			// 	30: '7.5rem'
-			// },
+			spacing: {
+				18: '4.375rem'
+			},
 		},
 	},
 	variants: {
-		extend: {},
+		extend: {
+			ringWidth: ['hover'],
+			ringColor: ['hover'],
+		},
 	},
 	plugins: [],
 }

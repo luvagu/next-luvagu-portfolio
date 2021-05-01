@@ -5,11 +5,13 @@
 
 :root {
 	--gray-400: rgb(156, 163, 175);
-	--gray-900: rgb(17, 24, 39);
 	--gray-700: rgb(55, 65, 81);
+	--gray-800: rgb(31, 41, 55);
+	--gray-900: rgb(17, 24, 39);
 	--dark-gray-shadow: rgba(10, 10, 10, 0.7);
 	--yellow-400: rgb(251, 191, 36);
-	--easing: cubic-bezier(0.645, 0.045, 0.355, 1)
+	--easing: cubic-bezier(0.645, 0.045, 0.355, 1);
+	--transition-all: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 ::selection {
@@ -19,6 +21,7 @@
 
 /* Scrollbar Styles */
 html {
+	scroll-behavior: smooth;
 	scrollbar-width: thin;
 	scrollbar-color: var(--gray-700) var(--gray-900);
 }
@@ -55,6 +58,10 @@ body {
 	}
 }
 
+.header-scroll-shadow {
+	box-shadow: 0 10px 30px -10px var(--dark-gray-shadow);
+}
+
 /* .common-links {
 	@apply inline-block relative hover:text-yellow-400 focus:text-yellow-400 transition-all duration-300;
 } */
@@ -63,18 +70,18 @@ body {
 	@apply my-0 mx-auto py-14 sm:py-20 md:py-24 px-0 max-w-5xl;
 } */
 
+.section-heading {
+	@apply flex items-center relative mt-2.5 mx-0 mb-10 w-full text-gray-300 text-2xl sm:text-3xl font-semibold whitespace-nowrap;
+}
+
+.section-heading:after {
+	content: '';
+	@apply block relative h-px ml-2.5 sm:ml-5 bg-gray-400 bg-opacity-20 w-full md:w-48 lg:w-80;
+}
+
 #logo:hover,
 #logo:focus {
 	fill: rgba(251, 190, 36, 0.1);
-}
-
-p {
-	margin: 0 0 15px 0;
-}
-
-p:last-child,
-p:last-of-type {
-	margin: 0;
 }
 
 
