@@ -1,10 +1,14 @@
-import { useEffect } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import { screConfig } from '../../config'
 import scre from '../../utils/scre'
 
-const TabButton = ({ isActive, tabName }) => {
+const TabButton = ({ isActive, label, ...props }) => {
 	return (
-		<button className={`relative flex items-center w-full h-10 pt-0 px-4 md:px-5 pb-0.5 border-l-2 border-gray-500 bg-transparent font-mono text-sm whitespace-nowrap hover:text-yellow-400 focus:text-yellow-400 hover:bg-gray-800 focus:bg-gray-800 focus:outline-none transition-all duration-300 ${isActive ? 'text-yellow-400' : 'text-gray-400'}`}>
-			{tabName}
+		<button 
+			className={`relative flex items-center w-full h-10 pt-0 px-4 md:px-5 pb-0.5 border-l-2 border-gray-500 bg-transparent font-mono text-sm whitespace-nowrap hover:text-yellow-400 focus:text-yellow-400 hover:bg-gray-800 focus:bg-gray-800 focus:outline-none transition-all duration-300 ${isActive ? 'text-yellow-400' : 'text-gray-400'}`}
+			{...props}
+		>
+			{label}
 
 			<style jsx>{`
 				@media (max-width: 600px) {
@@ -47,10 +51,58 @@ const Highlight = ({ activeTabId }) => {
 	)
 }
 	
+const TabPanels = ({ children }) => {
+	return (
+		<div className="relative w-full ml-0 sm:ml-5">{children}</div>
+	)
+}
 
+const TabPanel = ({ title, url, company, range, html }) => {
+	return (
+		<div className="w-full h-auto py-2.5 px-1.5">
+			<h3 className="mb-0.5 text-xl leading-tight font-medium text-gray-300">
+				<span>{title}</span>
+				<span className="text-yellow-400">
+					{' '} @ {' '} 
+					<a href={url} targe="_blank" rel="noopener noreferrer">{company}</a>
+				</span>
+			</h3>
 
+			<p className="mb-6 text-gray-400 font-mono text-sm">{range}</p>
 
-function Experience() {
+			<div dangerouslySetInnerHTML={{ __html: html }} />
+
+			<style jsx>{`
+				ul {
+					padding: 0;
+					margin: 0;
+					list-style: none;
+					font-size: 18px;
+				}
+
+				ul > li {
+					position: relative;
+					padding-left: 30px;
+					margin-bottom: 10px;
+				}
+				
+				ul > li:before {
+                    content: '•';
+                    position: absolute;
+                    left: 0;
+                    color: var(--yellow-400);
+                    // font-size: 14px;
+                    // line-height: 12px;
+                }
+			`}</style>
+		</div>
+	)
+}
+
+function Experience({ jobsData }) {
+	console.log(jobsData);
+
+	const [activeTabId, setActiveTabId] = useState(0)
 	const revealObject = useRef(null)
 
 	useEffect(() => {
@@ -62,10 +114,18 @@ function Experience() {
 			<h2 className="section-heading">My Work Experience</h2>
 
 			<div className="inner-section block sm:flex">
-				{/* tabs list */}
+				{/* tab list */}
                 <div className="tab-list relative w-max p-0 m-0 list-none">
-
+					{jobsData && jobsData.map(({ company }, idx) => (
+						<TabButton key={idx} isActive={activeTabId === idx} label={company} onClick={() => setActiveTabId(idx)} />
+					))}
 				</div>
+
+				{/* tab panels */}
+				<TabPanels>
+
+				</TabPanels>
+
             </div>
 
             <style jsx>{`

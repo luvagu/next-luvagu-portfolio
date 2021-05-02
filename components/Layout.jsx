@@ -7,7 +7,7 @@ function Layout({ isHome, children }) {
 	const { asPath } = useRouter()
 
 	useEffect(() => {
-		if (isLoading) {
+		if (isLoading || asPath === '/') {
 			return
 		}
 
