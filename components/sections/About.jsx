@@ -61,6 +61,7 @@ function About() {
                     content: '•';
                     position: absolute;
                     left: 0;
+                    top: 2px;
                     color: var(--yellow-400);
                     font-size: 14px;
                     line-height: 12px;

@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { screConfig } from '../../config'
 import scre from '../../utils/scre'
+import { CSSTransition } from 'react-transition-group'
 
 const TabButton = ({ isActive, label, ...props }) => {
 	return (
@@ -8,7 +9,7 @@ const TabButton = ({ isActive, label, ...props }) => {
 			className={`relative flex items-center w-full h-10 pt-0 px-4 md:px-5 pb-0.5 border-l-2 border-gray-500 bg-transparent font-mono text-sm whitespace-nowrap hover:text-yellow-400 focus:text-yellow-400 hover:bg-gray-800 focus:bg-gray-800 focus:outline-none transition-all duration-300 ${isActive ? 'text-yellow-400' : 'text-gray-400'}`}
 			{...props}
 		>
-			{label}
+			<span>{label}</span>
 
 			<style jsx>{`
 				@media (max-width: 600px) {
@@ -27,9 +28,16 @@ const TabButton = ({ isActive, label, ...props }) => {
 }
 
 const Highlight = ({ activeTabId }) => {
+	console.log(activeTabId)
 	return (
 		<div className="highlight absolute top-0 left-0 z-10 w-0.5 h-10 rounded bg-yellow-400">
 			<style jsx>{`
+				.highlight {
+					transform: translateY(calc(${activeTabId} * 40px));
+  					transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  					transition-delay: 0.1s;
+				}
+
 				@media (max-width: 600px) {
 					.highlight {
 						top: auto;
@@ -41,6 +49,7 @@ const Highlight = ({ activeTabId }) => {
 						transform: translateX(calc(${activeTabId} * 120px));
 					}
 				}
+				
 				@media (max-width: 480px) {
 					.highlight {
 						margin-left: 25px;
@@ -57,10 +66,10 @@ const TabPanels = ({ children }) => {
 	)
 }
 
-const TabPanel = ({ title, url, company, range, html }) => {
+const TabContent = ({ title, url, company, range, html, ...props }) => {
 	return (
-		<div className="w-full h-auto py-2.5 px-1.5">
-			<h3 className="mb-0.5 text-xl leading-tight font-medium text-gray-300">
+		<div className="w-full h-auto py-2.5 px-1.5" {...props}>
+			<h3 className="mb-1 text-xl leading-tight font-medium text-gray-300">
 				<span>{title}</span>
 				<span className="text-yellow-400">
 					{' '} @ {' '} 
@@ -70,38 +79,12 @@ const TabPanel = ({ title, url, company, range, html }) => {
 
 			<p className="mb-6 text-gray-400 font-mono text-sm">{range}</p>
 
-			<div dangerouslySetInnerHTML={{ __html: html }} />
-
-			<style jsx>{`
-				ul {
-					padding: 0;
-					margin: 0;
-					list-style: none;
-					font-size: 18px;
-				}
-
-				ul > li {
-					position: relative;
-					padding-left: 30px;
-					margin-bottom: 10px;
-				}
-				
-				ul > li:before {
-                    content: '•';
-                    position: absolute;
-                    left: 0;
-                    color: var(--yellow-400);
-                    // font-size: 14px;
-                    // line-height: 12px;
-                }
-			`}</style>
+			<div className="tabpanel-list" dangerouslySetInnerHTML={{ __html: html }} />
 		</div>
 	)
 }
 
 function Experience({ jobsData }) {
-	console.log(jobsData);
-
 	const [activeTabId, setActiveTabId] = useState(0)
 	const revealObject = useRef(null)
 
@@ -113,19 +96,31 @@ function Experience({ jobsData }) {
 		<section ref={revealObject} id="experience" className="my-0 mx-auto py-14 sm:py-20 md:py-24 px-0 max-w-700">
 			<h2 className="section-heading">My Work Experience</h2>
 
-			<div className="inner-section block sm:flex">
-				{/* tab list */}
-                <div className="tab-list relative w-max p-0 m-0 list-none">
+			<div className="inner-section flex">
+				{/* tab list buttons */}
+                <div className="tab-list relative w-max p-0 m-0">
 					{jobsData && jobsData.map(({ company }, idx) => (
 						<TabButton key={idx} isActive={activeTabId === idx} label={company} onClick={() => setActiveTabId(idx)} />
 					))}
+					<Highlight activeTabId={activeTabId} />
 				</div>
 
 				{/* tab panels */}
 				<TabPanels>
-
+					{jobsData && jobsData.map(({ title, url, company, range, html }, idx) => (
+						<CSSTransition key={idx} in={activeTabId === idx} timeout={300} classNames='fade'>
+							<TabContent
+								title={title} 
+								url={url} 
+								company={company} 
+								range={range} 
+								html={html} 
+								aria-hidden={activeTabId !== idx}
+								hidden={activeTabId !== idx}
+							/>
+						</CSSTransition>
+					))}
 				</TabPanels>
-
             </div>
 
             <style jsx>{`
@@ -140,6 +135,10 @@ function Experience({ jobsData }) {
 				}
 
 				@media (max-width: 600px) {
+					.inner-section {
+						display: block;
+					}
+
 					.tab-list {
 						display: flex;
 						overflow-x: auto;
@@ -148,14 +147,6 @@ function Experience({ jobsData }) {
 						margin-left: -50px;
 						margin-bottom: 30px;
 					}
-
-					.tab-list > li:first-of-type {
-						margin-left: 50px;
-					}
-
-					.tab-list > li:last-of-type {
-						padding-right: 50px;
-					}
 				}
 
 				@media (max-width: 480px) {
@@ -163,14 +154,6 @@ function Experience({ jobsData }) {
 						width: calc(100% + 50px);
 						padding-left: 25px;
 						margin-left: -25px;
-					}
-
-					.tab-list > li:first-of-type {
-						margin-left: 25px;
-					}
-
-					.tab-list > li:last-of-type {
-						padding-right: 25px;
 					}
 				}
             `}</style>
