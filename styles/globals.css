@@ -96,6 +96,26 @@
 		box-shadow: 0 10px 30px -10px var(--dark-gray-shadow);
 	}
 
+	.inline-link {
+		@apply inline-block relative hover:text-yellow-400 focus:text-yellow-400 transition-all duration-300;
+	}
+
+	.inline-link:hover > *,
+	.inline-link:focus > * {
+		outline: 0;
+		@apply text-yellow-400 transition-all duration-300;
+	}
+
+	.inline-link:hover:after,
+	.inline-link:focus:after {
+		@apply w-full;
+	}
+
+	.inline-link:after {
+		content: '';
+		@apply block w-0 h-px relative bottom-0 bg-yellow-400 transition-all duration-300 opacity-50;
+	}
+
 	.section-heading {
 		@apply flex items-center relative mt-2.5 mx-0 mb-10 w-full text-gray-300 text-2xl sm:text-3xl font-semibold whitespace-nowrap;
 	}

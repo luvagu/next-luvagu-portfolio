@@ -4,10 +4,9 @@ title: 'Front-End Developer'
 company: 'Hiolo'
 location: 'Brighton, UK'
 range: 'February 2010 - December 2012'
-url: 'https://hiolo.com/'
+url: '#'
 ---
 
-- Developed and shipped highly interactive web applications for Apple Music using Ember.js
-- Built and shipped the Apple Music Extension within Facebook Messenger leveraging third-party and internal APIs
-- Architected and implemented the front-end of Apple Music's embeddable web player widget, which lets users log in and listen to full songs in the browser
-- Contributed extensively to MusicKit.js, a JavaScript framework that allows developers to add an Apple Music player to their web apps
+- Built, integrated and maintained code to interact with several drop-shippers APIs and our database to ensure the product data was always in sync.
+- Wrote scripts that run on intervals to collect product data from the database and exported it the the required format for the Google Commerce and Bing Shopping platforms.
+- Developed and maintained features for the company's website using HTML, CSS, JavaScript, and PHP.

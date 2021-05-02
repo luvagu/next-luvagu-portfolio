@@ -1,13 +1,13 @@
 ---
 date: '2014-01-14'
-title: 'Front-End Developer'
+title: 'Full-Stack Engineer'
 company: 'Imporpernos'
 location: 'Brighton, UK'
 range: 'January 2014 - Present'
 url: 'https://www.imporpernos.com/'
 ---
 
-- Developed and shipped highly interactive web applications for Apple Music using Ember.js
-- Built and shipped the Apple Music Extension within Facebook Messenger leveraging third-party and internal APIs
-- Architected and implemented the front-end of Apple Music's embeddable web player widget, which lets users log in and listen to full songs in the browser
-- Contributed extensively to MusicKit.js, a JavaScript framework that allows developers to add an Apple Music player to their web apps
+- Build and maintain in-house productivity and auxiliary tools for the accounting and sales departments using HTML/CSS, JavaScript, PHP, Node.js/Express, React.
+- Write performant and complex SQL queries to extract data segments and/or generate specialized reports for the accounting department.
+- Collaborate with the marketing team to build effective landing pages.
+- Continuously maintain and test the company's website and android app.

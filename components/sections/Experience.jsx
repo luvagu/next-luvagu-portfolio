@@ -73,7 +73,10 @@ const TabContent = ({ title, url, company, range, html, ...props }) => {
 				<span>{title}</span>
 				<span className="text-yellow-400">
 					{' '} @ {' '} 
-					<a href={url} targe="_blank" rel="noopener noreferrer">{company}</a>
+					{url === '#' 
+						? company 
+						: (<a className="inline-link" href={url} target="_blank" rel="noopener noreferrer">{company}</a>)
+					}
 				</span>
 			</h3>
 

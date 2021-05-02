@@ -4,10 +4,10 @@ title: 'Front-End Developer'
 company: 'ZoneTronics'
 location: 'Brighton, UK'
 range: 'April 2008 - January 2010'
-url: 'https://zonetronics.com/'
+url: '#'
 ---
 
-- Developed and shipped highly interactive web applications for Apple Music using Ember.js
-- Built and shipped the Apple Music Extension within Facebook Messenger leveraging third-party and internal APIs
-- Architected and implemented the front-end of Apple Music's embeddable web player widget, which lets users log in and listen to full songs in the browser
-- Contributed extensively to MusicKit.js, a JavaScript framework that allows developers to add an Apple Music player to their web apps
+- Here was the starting point of my career as web developer, a partnership for an online electronics e-commerce retailer.
+- Edited and implemented features to a custom OpenCart theme. 
+- Wrote scripts in PHP to automate repetitive tasks and to bulk-upload data to a MySql database.
+- Contributed in building landing pages and newsletter templates using HTML/CSS and JavaScript.
