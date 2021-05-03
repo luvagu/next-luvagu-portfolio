@@ -3,6 +3,8 @@ import Image from 'next/image'
 import { RenderIcon } from '../icons'
 
 function Featured({ featuredProjects }) {
+    console.log(featuredProjects)
+    
     const revealTitle = useRef(null)
     const revealProject = useRef([])
 

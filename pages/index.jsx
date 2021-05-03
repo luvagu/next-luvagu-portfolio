@@ -1,13 +1,23 @@
-import { Layout, Hero, About, Experience } from '../components'
-import { getJobsSortedData } from '../utils/data'
+import { Layout, Hero, About, Experience, Featured } from '../components'
+import { getFeaturedProjects, getJobsSortedData } from '../utils/data'
 
 export const getStaticProps = async () => {
-	const jobsData = await getJobsSortedData()
+	try {
+		const jobsData = await getJobsSortedData()
+		const featuredProjects = await getFeaturedProjects()
 
-	return {
-		props: {
-			jobsData,
-		},
+		return {
+			props: {
+				jobsData,
+				featuredProjects,
+			},
+			revalidate: 1,
+		}
+	} catch (error) {
+		console.log('Error: %s', error?.message)
+		return {
+			notFound: true,
+		}
 	}
 }
 
@@ -18,6 +28,7 @@ export default function Home({ jobsData}) {
 				<Hero />
 				<About />
 				<Experience jobsData={jobsData} />
+				<Featured featuredProjects={featuredProjects} />
 			</main>
 		</Layout>
 	)
