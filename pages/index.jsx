@@ -21,7 +21,7 @@ export const getStaticProps = async () => {
 	}
 }
 
-export default function Home({ jobsData}) {
+export default function Home({ jobsData, featuredProjects }) {
 	return (
 		<Layout isHome={true}>
 			<main className="fill-vertical">
