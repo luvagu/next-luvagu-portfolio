@@ -6,15 +6,28 @@ import { CSSTransition } from 'react-transition-group'
 const TabButton = ({ isActive, label, ...props }) => {
 	return (
 		<button 
-			className={`relative flex items-center w-full h-10 pt-0 px-4 md:px-5 pb-0.5 border-l-2 border-gray-500 bg-transparent font-mono text-sm whitespace-nowrap hover:text-yellow-400 focus:text-yellow-400 hover:bg-gray-800 focus:bg-gray-800 focus:outline-none transition-all duration-300 ${isActive ? 'text-yellow-400' : 'text-gray-400'}`}
+			className={`relative flex items-center w-full h-10 border-l-2 border-gray-500 bg-transparent font-mono text-sm text-left whitespace-nowrap hover:text-yellow-400 focus:text-yellow-400 hover:bg-gray-800 focus:bg-gray-800 focus:outline-none transition-all duration-300 ${isActive ? 'text-yellow-400' : 'text-gray-400'}`}
 			{...props}
 		>
 			<span>{label}</span>
 
 			<style jsx>{`
+				button {
+					padding: 0 20px 2px;
+				}
+
+				@media (max-width: 768px) {
+					button {
+						padding: 0 15px 2px;
+					}
+				}
+
 				@media (max-width: 600px) {
 					button {
+						display: flex;
 						justify-content: center;
+						align-items: center;
+						width: 120px;
 						min-width: 120px;
 						padding: 0 15px;
 						border-left: 0;
@@ -62,7 +75,17 @@ const Highlight = ({ activeTabId }) => {
 	
 const TabPanels = ({ children }) => {
 	return (
-		<div className="relative w-full ml-0 sm:ml-5">{children}</div>
+		<div className="relative w-full ml-5">
+			{children}
+
+			<style jsx>{`
+				@media (max-width: 600px) {
+					div {
+						margin-left: 0;
+					}
+				}
+			`}</style>
+		</div>
 	)
 }
 
@@ -80,7 +103,7 @@ const TabContent = ({ title, url, company, range, html, ...props }) => {
 				</span>
 			</h3>
 
-			<p className="mb-6 text-gray-400 font-mono text-sm">{range}</p>
+			<p className="mb-5 text-gray-400 font-mono text-sm">{range}</p>
 
 			<div className="tabpanel-list" dangerouslySetInnerHTML={{ __html: html }} />
 		</div>

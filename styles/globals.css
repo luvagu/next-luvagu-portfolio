@@ -135,13 +135,12 @@
 	}
 
 	.tabpanel-list > ul > li {
-		padding-left: 30px;
-		@apply relative mb-2.5;
+		@apply relative mb-2.5 pl-6;
 	}
 
 	.tabpanel-list > ul > li:before {
 		content: '•';
-		@apply absolute left-0 top-1 text-yellow-400 text-sm leading-3;
+		@apply absolute left-0 top-1 text-yellow-400 text-base leading-3;
 	}
 
 	/* https://reactcommunity.org/react-transition-group/css-transition */
