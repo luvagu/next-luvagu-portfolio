@@ -6,7 +6,7 @@ import remark from 'remark'
 
 const dataDir = join(process.cwd(), 'data')
 
-export const getJobsSortedData = async (dir) => {
+export const getJobsSortedData = async () => {
     try {
         const jobsDir = join(dataDir, 'jobs')
         const fileNames = readdirSync(jobsDir)
@@ -22,6 +22,27 @@ export const getJobsSortedData = async (dir) => {
         }
 
         return allJobsData.sort((a, b) => (a.date < b.date ? 1 : -1))
+    } catch (error) {
+        console.log(error.message)
+        return null
+    }
+}
+
+export const getFeaturedProjects = async () => {
+    try {
+        const featuredDir = join(dataDir, 'featured')
+        const fileNames = readdirSync(featuredDir)
+        const allFeaturedProjects = []
+
+        for (const file of fileNames) {
+            const fileContents = readFileSync(join(featuredDir, file), 'utf8')
+            const { data, content } = matter(fileContents)
+            const processContent = await remark().use(html).process(content)
+            const contentHtml = processContent.toString()
+            allFeaturedProjects.push({ ...data, html: contentHtml })
+        }
+
+        return allFeaturedProjects.sort((a, b) => (a.date < b.date ? 1 : -1))
     } catch (error) {
         console.log(error.message)
         return null
