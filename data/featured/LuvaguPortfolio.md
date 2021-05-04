@@ -7,7 +7,7 @@ external: '#'
 tech:
   - Next.js
   - Tailwind CSS
-  - Animations
+  - Transitions
   - Vercel Hosting
 active: true
 ---
