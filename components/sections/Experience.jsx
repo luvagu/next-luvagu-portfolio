@@ -41,7 +41,6 @@ const TabButton = ({ isActive, label, ...props }) => {
 }
 
 const Highlight = ({ activeTabId }) => {
-	console.log(activeTabId)
 	return (
 		<div className="highlight absolute top-0 left-0 z-10 w-0.5 h-10 rounded bg-yellow-400">
 			<style jsx>{`

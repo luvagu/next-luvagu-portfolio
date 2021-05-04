@@ -1,5 +1,5 @@
-import anime from 'animejs'
 import { useEffect, useState } from 'react'
+import anime from 'animejs'
 import { IconLoader } from './icons'
 
 function Loader({ endLoading }) {

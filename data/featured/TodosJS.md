@@ -1,16 +1,15 @@
 ---
 date: '4'
-title: 'Ptoject Title'
-cover: '/img/halcyon.png'
-github: 'https://github.com/'
-external: '#'
+title: 'ToDos JS'
+cover: '/img/todosjs.png'
+github: 'https://github.com/luvagu/todos-js-snowpack-tailwind'
+external: 'https://luvagu.github.io/todos-js-snowpack-tailwind/'
 tech:
-  - VS Code
-  - Sublime Text
-  - Atom
-  - iTerm2
-  - Hyper
-showInProjects: true
+  - JavaScript (ES6+)
+  - Snowpack
+  - FaunaDB
+  - Tailwind CSS
+active: true
 ---
 
-A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more.
+A nice multi-user JavaScript todo app build with Snowpack and Tailwind CSS. It incorporates FaunaDB built-in Auth features to handle user sessions and stores data using the FQL (Fauna Query Language).

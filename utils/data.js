@@ -42,7 +42,7 @@ export const getFeaturedProjects = async () => {
             allFeaturedProjects.push({ ...data, html: contentHtml })
         }
 
-        return allFeaturedProjects.sort((a, b) => (a.date < b.date ? 1 : -1))
+        return allFeaturedProjects.filter(({ active }) => active).sort((a, b) => (a.date > b.date ? 1 : -1))
     } catch (error) {
         console.log(error.message)
         return null

@@ -1,7 +1,7 @@
 ---
-date: '3'
-title: 'Ptoject Title'
-cover: '/img/halcyon.png'
+date: '5'
+title: 'Node Pizza Delivery'
+cover: '/img/luvagu-portfolio.png'
 github: 'https://github.com/'
 external: '#'
 tech:
@@ -10,7 +10,7 @@ tech:
   - Atom
   - iTerm2
   - Hyper
-showInProjects: true
+active: true
 ---
 
 A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more.

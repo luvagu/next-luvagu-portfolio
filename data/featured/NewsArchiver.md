@@ -1,16 +1,16 @@
 ---
 date: '1'
-title: 'Ptoject Title'
-cover: '/img/halcyon.png'
-github: 'https://github.com/'
-external: '#'
+title: 'Next Headlines Archiver'
+cover: '/img/news-archiver.png'
+github: 'https://github.com/luvagu/next-headlines-archiver'
+external: 'https://next-headlines-archiver.vercel.app'
 tech:
-  - VS Code
-  - Sublime Text
-  - Atom
-  - iTerm2
-  - Hyper
-showInProjects: true
+  - Node.js
+  - Puppeteer
+  - Next.js
+  - Auth0
+  - FaunaDB
+active: true
 ---
 
-A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more.
+Full Stack Data Aggregation web app that archives the headlines content from CNN and Fox News on scheduled intervals and allows users to scroll through a news timeline to see how they are reported on these sites. 

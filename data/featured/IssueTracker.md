@@ -1,7 +1,7 @@
 ---
-date: '5'
-title: 'Ptoject Title'
-cover: '/img/halcyon.png'
+date: '6'
+title: 'Project Title'
+cover: '/img/example.png'
 github: 'https://github.com/'
 external: '#'
 tech:
@@ -10,7 +10,7 @@ tech:
   - Atom
   - iTerm2
   - Hyper
-showInProjects: true
+active: false
 ---
 
-A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more.
+A nicer look at your GitHub profile and repository stats with data visualizations of your top languages and stars. Sort through your top repos by number of stars, forks, and size.

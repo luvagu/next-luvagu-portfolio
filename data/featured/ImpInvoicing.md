@@ -1,16 +1,14 @@
 ---
 date: '2'
-title: 'Ptoject Title'
-cover: '/img/halcyon.png'
-github: 'https://github.com/'
+title: 'IMP Invoicing'
+cover: '/img/imp-invoicing.png'
+github: 'https://github.com/luvagu/imp-invoicing-node-react'
 external: '#'
 tech:
-  - VS Code
-  - Sublime Text
-  - Atom
-  - iTerm2
-  - Hyper
-showInProjects: true
+  - Node.js / Express
+  - React
+  - Tailwind CSS
+active: true
 ---
 
-A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more.
+A custom in-house Invoicing App that generates PDF invoices and quotes. Existing client and product data served through the JSON API. Also features a dashboard, documents / product search and local user authentication.
