@@ -22,6 +22,7 @@ module.exports = {
 			// },
 			maxWidth: {
 				300: '300px',
+				600: '600px',
 				700: '700px',
 			},
 			// screens: {

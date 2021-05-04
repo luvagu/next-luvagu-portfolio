@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
-import { Email, Loader, Navbar, Social } from '.'
+import { Email, Footer, Loader, Navbar, Social } from '.'
 
 function Layout({ isHome, children }) {
 	const [isLoading, setIsLoading] = useState(true)
@@ -36,9 +36,11 @@ function Layout({ isHome, children }) {
 
 					<div id="content">
                         {children}
+						<Footer />
 					</div>
 				</div>
 			)}
+			
             <style jsx>{`
                 #layout {
                     grid-template-rows: 1fr auto;

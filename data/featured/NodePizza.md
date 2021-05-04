@@ -10,7 +10,7 @@ tech:
   - Atom
   - iTerm2
   - Hyper
-active: true
+active: false
 ---
 
 A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more.

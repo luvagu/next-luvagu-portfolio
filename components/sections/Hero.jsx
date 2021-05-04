@@ -28,7 +28,7 @@ function Hero() {
 
     const item5 = (<a 
         href={`mailto:${email}`}
-        className="mt-12 inline-block relative text-yellow-400 text-base  font-mono leading-none bg-transparent border border-yellow-400 rounded py-5 px-7 hover:bg-yellow-400 hover:bg-opacity-10 focus:outline-none transition-all duration-300"
+        className="mt-12 inline-block relative text-yellow-400 text-base font-mono leading-none bg-transparent border border-yellow-400 rounded py-5 px-7 hover:bg-yellow-400 hover:bg-opacity-10 focus:outline-none transition-all duration-300"
     >
         Get In Touch
     </a>)

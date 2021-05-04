@@ -1,4 +1,4 @@
-import { Layout, Hero, About, Experience, Featured } from '../components'
+import { Layout, Hero, About, Experience, Featured, Metatags, Contact } from '../components'
 import { getFeaturedProjects, getJobsSortedData } from '../utils/data'
 
 export const getStaticProps = async () => {
@@ -24,11 +24,13 @@ export const getStaticProps = async () => {
 export default function Home({ jobsData, featuredProjects }) {
 	return (
 		<Layout isHome={true}>
+			<Metatags />
 			<main className="fill-vertical">
 				<Hero />
 				<About />
 				<Experience jobsData={jobsData} />
 				<Featured featuredProjects={featuredProjects} />
+				<Contact />
 			</main>
 		</Layout>
 	)
