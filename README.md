@@ -20,7 +20,7 @@
 - Responsive
 - Smooth transitions and scrolling
 - Server Side Rendered (SSR)
-- Static & Incremental Regeneration
+- Incremental Regeneration
 - Tailwind CSS & CSS on JSX
 - Light Mode (comming soon)
 - Blog (comming soon)
