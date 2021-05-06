@@ -7,8 +7,6 @@ import { loaderDelay, navLinks } from '../config'
 import { MobileMenu } from '.'
 
 function Navbar({ isHome }) {
-	console.log({loaderDelay, navLinks})
-	
 	const [isMounted, setIsMounted] = useState(!isHome)
 	const scrollDirection = useScrollDirection('down')
 	const [scrolledToTop, setScrolledToTop] = useState(true)
