@@ -110,6 +110,8 @@ const TabContent = ({ title, url, company, range, html, ...props }) => {
 }
 
 function Experience({ jobsData }) {
+	console.log(jobsData)
+	
 	const [activeTabId, setActiveTabId] = useState(0)
 	const revealObject = useRef(null)
 
