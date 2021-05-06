@@ -1,7 +1,7 @@
 import { Layout, Hero, About, Experience, Featured, Metatags, Contact } from '../components'
 import { getFeaturedProjects, getJobsSortedData } from '../utils/data'
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
 	try {
 		const jobsData = await getJobsSortedData()
 		const featuredProjects = await getFeaturedProjects()
@@ -11,7 +11,7 @@ export const getStaticProps = async () => {
 				jobsData,
 				featuredProjects,
 			},
-			revalidate: 1,
+			// revalidate: 1,
 		}
 	} catch (error) {
 		console.log('Error: %s', error?.message)
