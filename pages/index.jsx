@@ -1,7 +1,7 @@
 import { Layout, Hero, About, Experience, Featured, Metatags, Contact } from '../components'
 import { getFeaturedProjects, getJobsSortedData } from '../utils/data'
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
 	try {
 		const jobsData = await getJobsSortedData()
 		const featuredProjects = await getFeaturedProjects()
