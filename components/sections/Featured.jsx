@@ -4,9 +4,7 @@ import scre from '../../utils/scre'
 import { screConfig } from '../../config'
 import { RenderIcon } from '../icons'
 
-function Featured({ featuredProjects }) {
-    console.log(featuredProjects)
-    
+function Featured({ featuredProjects }) {    
     const revealTitle = useRef(null)
     const revealProjects = useRef([])
 
