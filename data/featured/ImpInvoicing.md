@@ -3,7 +3,7 @@ date: '2'
 title: 'IMP Invoicing'
 cover: '/img/imp-invoicing.png'
 github: 'https://github.com/luvagu/imp-invoicing-node-react'
-external: '#'
+external: 'https://imp-invoicing-react.web.app/'
 tech:
   - Node.js / Express
   - React
