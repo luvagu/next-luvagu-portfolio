@@ -23,15 +23,17 @@ export const getStaticProps = async () => {
 
 export default function Home({ jobsData, featuredProjects }) {
 	return (
-		<Layout isHome={true}>
+		<>
 			<Metatags />
-			<main className="fill-vertical">
-				<Hero />
-				<About />
-				<Experience jobsData={jobsData} />
-				<Featured featuredProjects={featuredProjects} />
-				<Contact />
-			</main>
-		</Layout>
+			<Layout home>
+				<main className="fill-vertical">
+					<Hero />
+					<About />
+					<Experience jobsData={jobsData} />
+					<Featured featuredProjects={featuredProjects} />
+					<Contact />
+				</main>
+			</Layout>
+		</>
 	)
 }

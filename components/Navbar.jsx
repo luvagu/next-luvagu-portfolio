@@ -6,8 +6,8 @@ import { IconLogo } from './icons'
 import { loaderDelay, navLinks } from '../config'
 import { MobileMenu } from '.'
 
-function Navbar({ isHome }) {
-	const [isMounted, setIsMounted] = useState(!isHome)
+function Navbar({ home }) {
+	const [isMounted, setIsMounted] = useState(!home)
 	const scrollDirection = useScrollDirection('down')
 	const [scrolledToTop, setScrolledToTop] = useState(true)
 
@@ -28,9 +28,9 @@ function Navbar({ isHome }) {
 		}
 	}, [])
 
-	const delay = isHome ? loaderDelay : 0
-	const fadeUp = isHome ? 'fade' : ''
-	const fadeDown = isHome ? 'fadedown' : ''
+	const delay = home ? loaderDelay : 0
+	const fadeUp = home ? 'fade' : ''
+	const fadeDown = home ? 'fadedown' : ''
 
 	return (
 		<header
@@ -61,7 +61,7 @@ function Navbar({ isHome }) {
 								<CSSTransition key={idx} classNames={fadeDown} timeout={delay}>
 									<li 
 										className="my-0 mx-1.5 relative text-sm font-semibold" 
-										style={{ transitionDelay: `${isHome ? idx * 100 : 0}ms` }}
+										style={{ transitionDelay: `${home ? idx * 100 : 0}ms` }}
 									>
 										<Link href={url}>
 											<a className="inline-block relative p-2.5 hover:text-yellow-400 hover:ring-1 hover:ring-yellow-400 focus:outline-none transition-none">
@@ -78,7 +78,7 @@ function Navbar({ isHome }) {
                     <TransitionGroup component={null}>
 						{isMounted && (
 							<CSSTransition classNames={fadeDown} timeout={delay}>
-								<div style={{ transitionDelay: `${isHome ? navLinks.length * 100 : 0}ms` }}>
+								<div style={{ transitionDelay: `${home ? navLinks.length * 100 : 0}ms` }}>
 									<a 
 										className="inline-block relative ml-4 text-sm font-mono text-yellow-400 bg-transparent border border-yellow-400 rounded py-3 px-4 leading-none hover:bg-yellow-400 hover:bg-opacity-10 focus:outline-none transition-all duration-300" 
 										href="/resume.pdf" 

@@ -3,7 +3,7 @@ date: '5'
 title: 'Node Pizza Delivery'
 cover: '/img/luvagu-portfolio.png'
 github: 'https://github.com/'
-external: '#'
+external: false
 tech:
   - VS Code
   - Sublime Text

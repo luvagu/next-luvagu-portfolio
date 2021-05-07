@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import { Email, Footer, Loader, Navbar, Social } from '.'
 
-function Layout({ isHome, children }) {
+function Layout({ home, children }) {
 	const [isLoading, setIsLoading] = useState(true)
 	const { asPath } = useRouter()
 
@@ -26,13 +26,13 @@ function Layout({ isHome, children }) {
 
 	return (
 		<div id="layout" className="min-h-screen grid">
-			{isLoading && isHome ? (
+			{isLoading && home ? (
 				<Loader endLoading={() => setIsLoading(false)} />
 			) : (
 				<div className="flex flex-col min-h-screen">
-					<Navbar isHome={isHome} />
-					<Social isHome={isHome} />
-					<Email isHome={isHome} />
+					<Navbar home={home} />
+					<Social home={home} />
+					<Email home={home} />
 
 					<div id="content">
                         {children}
@@ -40,13 +40,6 @@ function Layout({ isHome, children }) {
 					</div>
 				</div>
 			)}
-			
-            <style jsx>{`
-                #layout {
-                    grid-template-rows: 1fr auto;
-                    grid-template-columns: 100%;
-                }
-            `}</style>
 		</div>
 	)
 }

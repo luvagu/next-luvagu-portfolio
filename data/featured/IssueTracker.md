@@ -3,7 +3,7 @@ date: '6'
 title: 'Project Title'
 cover: '/img/example.png'
 github: 'https://github.com/'
-external: '#'
+external: false
 tech:
   - VS Code
   - Sublime Text
