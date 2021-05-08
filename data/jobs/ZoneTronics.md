@@ -3,7 +3,7 @@ date: '2008-04-18'
 title: 'Front-End Developer'
 company: 'ZoneTronics'
 location: 'Brighton, UK'
-range: 'April 2008 - January 2010'
+range: 'January 2010 - June 2011'
 url: '#'
 ---
 

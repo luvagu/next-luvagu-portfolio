@@ -7,7 +7,7 @@ range: 'January 2014 - Present'
 url: 'https://www.imporpernos.com/'
 ---
 
-- Develop in-house helper tools that increment a employee's productivity on every-day tasks.
+- Develop in-house helper tools that increment an employee's productivity on every-day tasks.
 
 - Write complex SQL queries to extract specific data segments and/or generate specialized reports for accounting purposes.
 

@@ -152,6 +152,7 @@ function Featured({ featuredProjects }) {
 					text-align: right;
 				}
 
+				.project-title,
 				.project-description,
 				.project-techs {
 					z-index: 2;
