@@ -43,7 +43,7 @@ function Featured({ featuredProjects }) {
 											Pinned Project
 										</p>
 
-										<h3 className="project-title m-0 mb-2.5 md:mb-5 text-white md:text-gray-300 text-2xl sm:text-3xl font-semibold leading-none">
+										<h3 className="project-title relative m-0 mb-2.5 md:mb-5 text-white md:text-gray-300 text-2xl sm:text-3xl font-semibold leading-none">
 											{external ? (
 												<a
 													href={external}
