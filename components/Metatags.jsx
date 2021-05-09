@@ -3,7 +3,7 @@ import Head from 'next/head'
 function Metatags({
 	title = 'Luis Vallejo (luvagu)',
 	description = 'Luis Vallejo is a software developer who loves creating engaging web applications.',
-	imageUrl = '/img/me.png',
+	imageUrl = '/img/og.png',
 }) {
 	return (
 		<Head>
