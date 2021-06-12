@@ -8,6 +8,9 @@ function Metatags({
 	return (
 		<Head>
 			<title>{title}</title>
+			<meta name="description" content={description} />
+			<meta name="lang" content={description} />
+
 			<meta name="twitter:card" content="summary" />
 			<meta name="twitter:site" content="@luiavag" />
 			<meta name="twitter:title" content={title} />
