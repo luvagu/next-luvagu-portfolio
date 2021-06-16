@@ -21,21 +21,20 @@ function Layout({ home, children }) {
 				}
 			}, 0)
 		}
-
 	}, [isLoading])
 
 	return (
-		<div id="layout" className="min-h-screen grid">
+		<div id='layout' className='min-h-screen grid'>
 			{isLoading && home ? (
 				<Loader endLoading={() => setIsLoading(false)} />
 			) : (
-				<div className="flex flex-col min-h-screen">
+				<div className='flex flex-col min-h-screen'>
 					<Navbar home={home} />
 					<Social home={home} />
 					<Email home={home} />
 
-					<div id="content">
-                        {children}
+					<div id='content'>
+						{children}
 						<Footer />
 					</div>
 				</div>

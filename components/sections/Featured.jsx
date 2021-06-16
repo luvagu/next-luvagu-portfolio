@@ -4,75 +4,74 @@ import scre from '../../utils/scre'
 import { screConfig } from '../../config'
 import { RenderIcon } from '../icons'
 
-function Featured({ featuredProjects }) {    
-    const revealTitle = useRef(null)
-    const revealProjects = useRef([])
+function Featured({ featuredProjects }) {
+	const revealTitle = useRef(null)
+	const revealProjects = useRef([])
 
-    useEffect(() => {
-        scre.reveal(revealTitle.current, screConfig())
-        revealProjects.current.forEach((ref, idx) => scre.reveal(ref, screConfig(idx * 100)))
-    }, [])
+	useEffect(() => {
+		scre.reveal(revealTitle.current, screConfig())
+		revealProjects.current.forEach((ref, idx) =>
+			scre.reveal(ref, screConfig(idx * 100))
+		)
+	}, [])
 
-    return (
+	return (
 		<section
-			id="projects"
-			className="m-0 mx-auto py-14 sm:py-20 md:py-24 px-0 max-w-5xl"
+			id='projects'
+			className='m-0 mx-auto py-14 sm:py-20 md:py-24 px-0 max-w-5xl'
 		>
-			<h2 ref={revealTitle} className="section-heading">
-				Apps I've Built
+			<h2 ref={revealTitle} className='section-heading'>
+				Apps I&apos;ve Built
 			</h2>
 
 			{/* projects grid */}
-			<ul className="p-0 m-0 list-none">
+			<ul className='p-0 m-0 list-none'>
 				{/* projects */}
 				{featuredProjects &&
 					featuredProjects.map(
-						(
-							{ external, title, tech, github, cover, html },
-							idx
-						) => (
+						({ external, title, tech, github, cover, html }, idx) => (
 							<li
 								key={idx}
-								ref={(e) => (revealProjects.current[idx] = e)}
-								className="project relative grid gap-2.5 grid-cols-12 items-center project-box-shadow"
+								ref={e => (revealProjects.current[idx] = e)}
+								className='project relative grid gap-2.5 grid-cols-12 items-center project-box-shadow'
 							>
 								{/* project contents */}
-								<div className="project-content relative">
+								<div className='project-content relative'>
 									<div>
-										<p className="project-label my-2.5 mx-0 text-yellow-400 font-mono text-sm font-normal">
+										<p className='project-label my-2.5 mx-0 text-yellow-400 font-mono text-sm font-normal'>
 											Pinned Project
 										</p>
 
-										<h3 className="project-title relative m-0 mb-2.5 md:mb-5 text-white md:text-gray-300 text-2xl sm:text-3xl font-semibold leading-none">
+										<h3 className='project-title relative m-0 mb-2.5 md:mb-5 text-white md:text-gray-300 text-2xl sm:text-3xl font-semibold leading-none'>
 											{external ? (
 												<a
 													href={external}
-													target="_blank"
-													rel="noopener noreferrer"
-													className="inline-block static md:relative hover:text-yellow-400 focus:text-yellow-400 focus:outline-none transition-all duration-300"
+													target='_blank'
+													rel='noopener noreferrer'
+													className='inline-block static md:relative hover:text-yellow-400 focus:text-yellow-400 focus:outline-none transition-all duration-300'
 												>
 													{title}
 												</a>
 											) : (
-												<span className="inline-block static md:relative hover:text-yellow-400 transition-all duration-300">
-                                                    {title}
-                                                </span>
+												<span className='inline-block static md:relative hover:text-yellow-400 transition-all duration-300'>
+													{title}
+												</span>
 											)}
 										</h3>
 
 										<div
-											className="project-description relative py-5 px-0 md:p-6 rounded bg-transparent md:bg-gray-800 text-gray-300 text-base shadow-none md:shadow-xl hover:shadow-2xl transition-all duration-300"
+											className='project-description relative py-5 px-0 md:p-6 rounded bg-transparent md:bg-gray-800 text-gray-300 text-base shadow-none md:shadow-xl hover:shadow-2xl transition-all duration-300'
 											dangerouslySetInnerHTML={{
 												__html: html,
 											}}
 										/>
 
 										{tech.length && (
-											<ul className="project-techs flex flex-wrap relative my-2.5 mx-0 md:mt-6 md:mb-2.5 md:mx-0 p-0 list-none">
+											<ul className='project-techs flex flex-wrap relative my-2.5 mx-0 md:mt-6 md:mb-2.5 md:mx-0 p-0 list-none'>
 												{tech.map((name, idx) => (
 													<li
 														key={idx}
-														className="mt-0 mr-2.5 md:mr-5 mb-1.5 ml-0 text-gray-300 md:text-gray-400 font-mono text-sm whitespace-nowrap"
+														className='mt-0 mr-2.5 md:mr-5 mb-1.5 ml-0 text-gray-300 md:text-gray-400 font-mono text-sm whitespace-nowrap'
 													>
 														{name}
 													</li>
@@ -81,33 +80,29 @@ function Featured({ featuredProjects }) {
 										)}
 
 										{/* links */}
-										<div className="project-links flex items-center relative mt-2.5 -ml-2.5 text-gray-300">
+										<div className='project-links flex items-center relative mt-2.5 -ml-2.5 text-gray-300'>
 											{github && (
 												<a
 													href={github}
-													target="_blank"
-													rel="noopener noreferrer"
-													className="relative flex justify-center items-center p-2.5 hover:text-yellow-400 focus:text-yellow-400 focus:ring-1 focus:ring-yellow-400 focus:outline-none transition-all duration-300"
+													target='_blank'
+													rel='noopener noreferrer'
+													className='relative flex justify-center items-center p-2.5 hover:text-yellow-400 focus:text-yellow-400 focus:ring-1 focus:ring-yellow-400 focus:outline-none transition-all duration-300'
 												>
-													<RenderIcon
-														name="GitHub"
-														height="h-5"
-														width="w-5"
-													/>
+													<RenderIcon name='GitHub' height='h-5' width='w-5' />
 												</a>
 											)}
 
 											{external && (
 												<a
 													href={external}
-													target="_blank"
-													rel="noopener noreferrer"
-													className="relative flex justify-center items-center p-2.5 hover:text-yellow-400 focus:text-yellow-400 focus:ring-1 focus:ring-yellow-400 focus:outline-none transition-all duration-300"
+													target='_blank'
+													rel='noopener noreferrer'
+													className='relative flex justify-center items-center p-2.5 hover:text-yellow-400 focus:text-yellow-400 focus:ring-1 focus:ring-yellow-400 focus:outline-none transition-all duration-300'
 												>
 													<RenderIcon
-														name="External"
-														height="h-5"
-														width="w-5 -mt-1"
+														name='External'
+														height='h-5'
+														width='w-5 -mt-1'
 													/>
 												</a>
 											)}
@@ -116,14 +111,14 @@ function Featured({ featuredProjects }) {
 								</div>
 
 								{/* project image */}
-								<div className="project-cover relative opacity-25 md:opacity-100 shadow-lg hover:shadow-xl w-full max-w-full h-full bg-yellow-400 rounded align-middle overflow-hidden hover:bg-transparent transition-all duration-200">
-									<div className="cover-filter relative rounded overflow-hidden mix-blend-multiply filter grayscale contrast-100 brightness-75 h-full">
+								<div className='project-cover relative opacity-25 md:opacity-100 shadow-lg hover:shadow-xl w-full max-w-full h-full bg-yellow-400 rounded align-middle overflow-hidden hover:bg-transparent transition-all duration-200'>
+									<div className='cover-filter relative rounded overflow-hidden mix-blend-multiply filter grayscale contrast-100 brightness-75 h-full'>
 										<Image
 											alt={title}
 											src={cover}
-											layout="fill"
-											objectFit="cover"
-											objectPosition="top"
+											layout='fill'
+											objectFit='cover'
+											objectPosition='top'
 										/>
 									</div>
 								</div>

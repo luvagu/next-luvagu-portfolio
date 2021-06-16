@@ -17,8 +17,8 @@ function Contact() {
             
             <p>
                 At present I am looking for new opportunities. 
-                If you liked what you've seen, get in touch with me. 
-                I'll be happy to assist you!
+                If you liked what you&apos;ve seen, get in touch with me. 
+                I&apos;ll be happy to assist you!
             </p>
 
             <a 

@@ -23,7 +23,7 @@ function Hero() {
     </h3>)
 
     const item4 = (<p className="m-0 mt-5 max-w-lg">
-        I'm a Brighton-based self-taught full-stack software developer who loves building engaging web applications and features that result in exceptional experiences.
+        I&apos;m a Brighton-based self-taught full-stack software developer who loves building engaging web applications and features that result in exceptional experiences.
     </p>)
 
     const item5 = (<a 

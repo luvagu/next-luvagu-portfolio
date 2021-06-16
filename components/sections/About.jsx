@@ -20,12 +20,12 @@ function About() {
                     {/* about texts */}
                     <div>
                         <p className="mb-4">
-                            Hello! I'm Luis and I love creating apps and features for the web. My web development journey started back in 2010 when I decided to improve my company's website by editing a custom OpenCart theme and adding features on top of it. The countless roadblocks along the way taught me lots about HTML/CSS, JS, PHP and SQL!
+                            Hello! I&apos;m Luis and I love creating apps and features for the web. My web development journey started back in 2010 when I decided to improve my company&apos;s website by editing a custom OpenCart theme and adding features on top of it. The countless roadblocks along the way taught me lots about HTML/CSS, JS, PHP and SQL!
                         </p>
                         <p className="mb-4">
-                            Since then, I've been developing, improving and maintaining productivity applications for my own company and clients. After working for so long with an older tech stack, in 2020, I decided to look for new opportunities and begun to learn a new tech stack.
+                            Since then, I&apos;ve been developing, improving and maintaining productivity applications for my own company and clients. After working for so long with an older tech stack, in 2020, I decided to look for new opportunities and begun to learn a new tech stack.
                         </p>
-                        <p>Here are the technologies I've been currently working with:</p>
+                        <p>Here are the technologies I&apos;ve been currently working with:</p>
                     </div>
                     
                     {/* skill list */}
@@ -42,7 +42,7 @@ function About() {
                 <div className="relative w-3/4 md:w-full max-w-300 mt-12 mx-auto md:m-0">
                     <div className="img-wrapper block relative w-full rounded bg-yellow-400 shadow-xl hover:shadow-2xl focus:shadow-2xl transition-all duration-300">
                         <div className="img-filter relative rounded overflow-hidden mix-blend-multiply filter grayscale contrast-100 transition-all duration-300">
-                            <Image src="/img/me.png" width="500" height="500" layout="responsive" />
+                            <Image src="/img/me.png" alt="Luis Vallejo" width="500" height="500" layout="responsive" />
                         </div>
                     </div>
                 </div>
