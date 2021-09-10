@@ -1,8 +1,8 @@
 import Head from 'next/head'
 
 function Metatags({
-	title = 'Luis Vallejo (luvagu)',
-	description = 'Luis Vallejo is a software developer who loves creating engaging web applications.',
+	title = 'Luis Vallejo (@luvagu)',
+	description = 'Luis Vallejo is a JavaScript software developer who loves creating engaging web applications.',
 	imageUrl = '/img/og.png',
 }) {
 	return (
