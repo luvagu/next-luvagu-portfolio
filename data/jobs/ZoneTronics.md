@@ -7,7 +7,7 @@ range: 'January 2010 - June 2011'
 url: '#'
 ---
 
-- Here was the starting point of my career as web developer, a partnership for an online electronics e-commerce retailer.
-- Edited and implemented features to a custom OpenCart theme. 
-- Wrote scripts in PHP to automate repetitive tasks and to bulk-upload data to a MySql database.
+- This was a partnership for an online electronics e-commerce retailer, the starting point of my career as a web developer.
+- Edited and implemented features to a custom OpenCart theme.
+- Wrote scripts in PHP to automate repetitive tasks and to bulk-upload data to a MySQL database.
 - Contributed in building landing pages and newsletter templates using HTML/CSS and JavaScript.

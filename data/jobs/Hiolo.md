@@ -7,9 +7,8 @@ range: 'November 2011 - February 2013'
 url: '#'
 ---
 
-- Developed and maintained code to fetch product data from several drop-shippers APIs to ensure our database was always in sync.
+- Developed and maintained code to fetch product data from several drop-shipping APIs to ensure that our database was always in sync.
 
-- Wrote code that ran on intervals to collect product data from our database and exported it to the required format for the Google Commerce and Bing Shopping platforms.
+- Wrote code that ran in intervals to collect product data from our database and exported it to the required format for the Google Commerce and Bing Shopping platforms.
 
-- Collaborate with the marketing team to build effective landing pages.
-Continuously maintain, test and update the company's website and android app.
+- Integrated and maintained online payments with PayPal for the company's website using HTML, CSS, JavaScript, and PHP.

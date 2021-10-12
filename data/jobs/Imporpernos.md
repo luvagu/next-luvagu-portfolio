@@ -7,10 +7,10 @@ range: 'January 2014 - Present'
 url: 'https://www.imporpernos.com/'
 ---
 
-- Develop in-house helper tools that increment an employee's productivity on every-day tasks.
+- Developing in-house helper tools that increase an employee's productivity on everyday tasks.
 
-- Write complex SQL queries to extract specific data segments and/or generate specialized reports for accounting purposes.
+- Writing complex SQL queries to extract specific data segments and/or generating specialized reports for accounting purposes.
 
-- Collaborate with the marketing team to build effective landing pages.
+- Collaborating with the marketing team to build effective landing pages.
 
-- Continuously maintain, test and update the company's website and android app.
+- Continuously maintaining, testing and updating the company's website and android app.
