@@ -21,7 +21,7 @@ function Layout({ home, children }) {
 				}
 			}, 0)
 		}
-	}, [isLoading])
+	}, [isLoading, asPath])
 
 	return (
 		<div id='layout' className='min-h-screen grid'>

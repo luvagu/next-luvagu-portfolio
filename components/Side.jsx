@@ -9,7 +9,7 @@ function Side({ home, position, children }) {
 		if (!home) return
 		const timeout = setTimeout(() => setIsMounted(true), loaderDelay)
 		return () => clearTimeout(timeout)
-	}, [])
+	}, [home])
 
 	return (
 		<TransitionGroup component={null}>
