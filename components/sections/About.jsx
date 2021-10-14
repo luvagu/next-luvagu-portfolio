@@ -35,7 +35,7 @@ function About() {
 							web. My web development journey started back in 2010 when I would
 							hire developers and designers to build a website or app for me,
 							and it was always a black box where I would pay these developers
-							and they'll come back with a product that I was never fully
+							and they&apos;ll come back with a product that I was never fully
 							satisfied with.
 						</p>
 						<p className='mb-4'>
