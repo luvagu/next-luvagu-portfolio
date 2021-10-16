@@ -1,6 +1,6 @@
 ---
 date: '2014-01-14'
-title: 'Full-Stack Developer'
+title: 'Software Developer'
 company: 'Imporpernos'
 location: 'Quito, EC'
 range: 'January 2014 - Present'
