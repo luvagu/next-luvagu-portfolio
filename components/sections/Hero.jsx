@@ -30,9 +30,9 @@ function Hero() {
 
 	const item4 = (
 		<p className='m-0 mt-5 max-w-lg'>
-			I&apos;m a Brighton-based self-taught full-stack javascript software
-			developer who loves building engaging web applications and features that
-			result in exceptional experiences.
+			I&apos;m a Brighton-based self-taught javascript software developer who
+			loves building engaging web applications and features that result in
+			exceptional experiences.
 		</p>
 	)
 

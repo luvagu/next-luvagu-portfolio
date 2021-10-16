@@ -1,6 +1,6 @@
 ---
 date: '2010-02-15'
-title: 'Back-End Developer'
+title: 'Front-End Developer'
 company: 'Hiolo'
 location: 'Brighton, UK'
 range: 'November 2011 - February 2013'
