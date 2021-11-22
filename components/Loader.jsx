@@ -1,11 +1,11 @@
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import anime from 'animejs'
 import { IconLoader } from './icons'
 
 function Loader({ endLoading }) {
 	const [isMounted, setIsMounted] = useState(false)
 
-	const animate = () => {
+	const animate = useCallback(() => {
 		const loader = anime.timeline({ complete: () => endLoading() })
 
 		loader
@@ -37,7 +37,7 @@ function Loader({ endLoading }) {
 				opacity: 0,
 				zIndex: -1,
 			})
-	}
+	}, [endLoading])
 
 	useEffect(() => {
 		const timeout = setTimeout(() => setIsMounted(true), 10)

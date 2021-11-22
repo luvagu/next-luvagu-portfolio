@@ -112,10 +112,13 @@ function Featured({ featuredProjects }) {
 
 								{/* project image */}
 								<div className='project-cover relative opacity-25 md:opacity-100 shadow-lg hover:shadow-xl w-full max-w-full h-full bg-yellow-400 rounded align-middle overflow-hidden hover:bg-transparent transition-all duration-200'>
-									<div className='cover-filter relative rounded overflow-hidden mix-blend-multiply filter grayscale contrast-100 brightness-75 h-full'>
+									<div className='cover-filter relative rounded overflow-hidden mix-blend-multiply filter grayscale contrast-100 brightness-75 w-full h-full'>
 										<Image
 											alt={title}
 											src={cover}
+											// height={438}
+											// width={700}
+											// layout='responsive'
 											layout='fill'
 											objectFit='cover'
 											objectPosition='top'

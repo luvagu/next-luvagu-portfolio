@@ -1,0 +1,40 @@
+0 info it worked if it ends with ok
+1 verbose cli [
+1 verbose cli   'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'run',
+1 verbose cli   'lint',
+1 verbose cli   '--no-cache'
+1 verbose cli ]
+2 info using npm@6.14.8
+3 info using node@v14.15.0
+4 verbose run-script [ 'prelint', 'lint', 'postlint' ]
+5 info lifecycle next-luvagu-portfolio@0.1.0~prelint: next-luvagu-portfolio@0.1.0
+6 info lifecycle next-luvagu-portfolio@0.1.0~lint: next-luvagu-portfolio@0.1.0
+7 verbose lifecycle next-luvagu-portfolio@0.1.0~lint: unsafe-perm in lifecycle true
+8 verbose lifecycle next-luvagu-portfolio@0.1.0~lint: PATH: C:\Users\luiav\AppData\Roaming\nvm\v14.15.0\node_modules\npm\node_modules\npm-lifecycle\node-gyp-bin;D:\WebDev\GitHub\next-luvagu-portfolio\node_modules\.bin;C:\Users\luiav\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\luiav\bin;C:\Python310\Scripts;C:\Python310;C:\Python39\Scripts;C:\Python39;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\ProgramData\chocolatey\bin;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\Git\cmd;C:\Users\luiav\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\luiav\AppData\Local\Microsoft\WindowsApps;C:\Users\luiav\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\luiav\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+9 verbose lifecycle next-luvagu-portfolio@0.1.0~lint: CWD: D:\WebDev\GitHub\next-luvagu-portfolio
+10 silly lifecycle next-luvagu-portfolio@0.1.0~lint: Args: [ '/d /s /c', 'next lint' ]
+11 silly lifecycle next-luvagu-portfolio@0.1.0~lint: Returned: code: 1  signal: null
+12 info lifecycle next-luvagu-portfolio@0.1.0~lint: Failed to exec lint script
+13 verbose stack Error: next-luvagu-portfolio@0.1.0 lint: `next lint`
+13 verbose stack Exit status 1
+13 verbose stack     at EventEmitter.<anonymous> (C:\Users\luiav\AppData\Roaming\nvm\v14.15.0\node_modules\npm\node_modules\npm-lifecycle\index.js:332:16)
+13 verbose stack     at EventEmitter.emit (events.js:315:20)
+13 verbose stack     at ChildProcess.<anonymous> (C:\Users\luiav\AppData\Roaming\nvm\v14.15.0\node_modules\npm\node_modules\npm-lifecycle\lib\spawn.js:55:14)
+13 verbose stack     at ChildProcess.emit (events.js:315:20)
+13 verbose stack     at maybeClose (internal/child_process.js:1048:16)
+13 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:288:5)
+14 verbose pkgid next-luvagu-portfolio@0.1.0
+15 verbose cwd D:\WebDev\GitHub\next-luvagu-portfolio
+16 verbose Windows_NT 10.0.22000
+17 verbose argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "run" "lint" "--no-cache"
+18 verbose node v14.15.0
+19 verbose npm  v6.14.8
+20 error code ELIFECYCLE
+21 error errno 1
+22 error next-luvagu-portfolio@0.1.0 lint: `next lint`
+22 error Exit status 1
+23 error Failed at the next-luvagu-portfolio@0.1.0 lint script.
+23 error This is probably not a problem with npm. There is likely additional logging output above.
+24 verbose exit [ 1, true ]

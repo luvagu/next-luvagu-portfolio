@@ -3,7 +3,7 @@ date: '2014-01-14'
 title: 'Software Developer'
 company: 'Imporpernos'
 location: 'Quito, EC'
-range: 'January 2014 - Present'
+range: 'January 2014 - November 2021'
 url: 'https://www.imporpernos.com/'
 ---
 
